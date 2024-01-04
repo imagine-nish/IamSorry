@@ -2,8 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Random Button Movement</title>
   <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 50px;
+      background-color: #ffd6f5; /* Cute pink background color */
+    }
+
+    #cat-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
     button {
       position: absolute;
     }
@@ -33,6 +48,7 @@
   </script>
 </head>
 <body>
+  <img id="cat-image" src="tenor.png" alt="Cute Cat Image">
   <button class="random-button">Random Button</button>
   <button class="static-button">Static Button</button>
 </body>
