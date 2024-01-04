@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    #cat-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    #forgive-btn, #dont-forgive-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #dont-forgive-btn {
+      animation: moveButton 2s infinite;
+    }
+
+    @keyframes moveButton {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+  <script>
+    function disableButton() {
+      alert("Cat forgives you! 😺");
+    }
+  </script>
+</head>
+<body>
+  <img id="cat-image" src="cat_image.jpg" alt="Cute Cat Image">
+  <p>Can you forgive me?</p>
+  <button id="forgive-btn" onclick="disableButton()">I Forgive</button>
+  <button id="dont-forgive-btn" onclick="alert('The button keeps moving away!')">I Don't</button>
+</body>
+</html>
