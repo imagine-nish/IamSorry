@@ -14,6 +14,7 @@
     }
 
     #cat-image {
+      position: relative;
       width: 100%;
       max-width: 400px;
       height: auto;
@@ -22,20 +23,27 @@
     }
 
     button {
-      position: absolute;
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
     }
 
+    .button-container {
+      position: relative;
+    }
+
     .random-button {
-      top: 350px; /* Adjusted top value */
-      left: 650px;
+      position: absolute;
+      top: 10px; /* Adjusted top value */
+      left: 50%; /* Adjusted left value */
+      transform: translateX(-50%);
     }
 
     .static-button {
-      top: 350px; /* Adjusted top value */
-      left: 450px;
+      position: absolute;
+      top: 60px; /* Adjusted top value */
+      left: 50%; /* Adjusted left value */
+      transform: translateX(-50%);
     }
   </style>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -47,21 +55,21 @@
             left: (Math.random() * 200) + "px",
             top: (Math.random() * 200) + "px",
           });
+          alert("Choice not acceptable. Please try again!");
         }
       });
 
       $(".static-button").on("click", function() {
         alert("Thank you! You are the best 😺");
       });
-      $(".random-button").on("click", function() {
-        alert("Choice not acceptable. Please try again!");
-      });
     });
   </script>
 </head>
 <body>
-  <img id="cat-image" src="tenor.png" alt="Cute Cat Image">
-  <button class="random-button">Fuck-Off</button>
-  <button class="static-button">I Forgive</button>
+  <div class="button-container">
+    <img id="cat-image" src="tenor.png" alt="Cute Cat Image">
+    <button class="random-button">Random Button</button>
+    <button class="static-button">I Forgive</button>
+  </div>
 </body>
 </html>
