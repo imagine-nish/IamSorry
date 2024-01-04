@@ -42,7 +42,7 @@
   <script>
     $(function(){
       $(".random-button").on({
-        mouseover: function(){
+        'touchstart click': function(){
           $(this).css({
             left: (Math.random() * 200) + "px",
             top: (Math.random() * 200) + "px",
@@ -51,10 +51,7 @@
       });
 
       $(".static-button").on("click", function() {
-        alert("Thank you! You are the best 😺");
-      });
-	  $(".random-button").on("click", function() {
-        alert("Choice not acceptable. Please try again!");
+        alert("Cat forgives you! 😺");
       });
     });
   </script>
