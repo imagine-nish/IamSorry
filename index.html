@@ -34,13 +34,14 @@
 
     .random-button {
       position: absolute;
-      top: 320px; /* Adjusted top value */
+      top: 10px; /* Adjusted top value */
       left: 50%; /* Adjusted left value */
+      transform: translateX(-50%);
     }
 
     .static-button {
       position: absolute;
-      top: 270px; /* Adjusted top value */
+      top: 60px; /* Adjusted top value */
       left: 50%; /* Adjusted left value */
       transform: translateX(-50%);
     }
@@ -49,11 +50,13 @@
   <script>
     $(function(){
       $(".random-button").on({
-        'touchstart click': function(){
+        'touchstart': function(){
           $(this).css({
             left: (Math.random() * 200) + "px",
             top: (Math.random() * 200) + "px",
           });
+        },
+        'click': function(){
           alert("Choice not acceptable. Please try again!");
         }
       });
